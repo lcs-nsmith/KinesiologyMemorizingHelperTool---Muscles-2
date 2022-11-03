@@ -11,7 +11,20 @@ import SwiftUI
 struct KinesiologyMemorizingHelperToolApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                MainPageView()
+                    .tabItem {
+                        Label("Questions", systemImage: "list.dash")
+                    }
+                HistoryTabView()
+                    .tabItem {
+                        Label("History", systemImage: "list.dash")
+                    }
+                AllBonesAndMuscles()
+                    .tabItem {
+                        Label("All Bones And Muscles", systemImage: "books.vertical")
+                    }
+            }
         }
     }
 }

@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		4434E4FF2913424A00C8AFD0 /* KinesiologyMemorizingHelperToolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434E4FE2913424A00C8AFD0 /* KinesiologyMemorizingHelperToolApp.swift */; };
-		4434E5012913424A00C8AFD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434E5002913424A00C8AFD0 /* ContentView.swift */; };
 		4434E5032913424C00C8AFD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4434E5022913424C00C8AFD0 /* Assets.xcassets */; };
 		4434E5072913424C00C8AFD0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4434E5062913424C00C8AFD0 /* Preview Assets.xcassets */; };
+		4434E50F2914124A00C8AFD0 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434E50E2914124A00C8AFD0 /* MainPageView.swift */; };
+		4434E5112914136B00C8AFD0 /* HistoryTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434E5102914136B00C8AFD0 /* HistoryTabView.swift */; };
+		4434E513291416C500C8AFD0 /* AllBonesAndMuscles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434E512291416C500C8AFD0 /* AllBonesAndMuscles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4434E4FB2913424A00C8AFD0 /* KinesiologyMemorizingHelperTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinesiologyMemorizingHelperTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4434E4FE2913424A00C8AFD0 /* KinesiologyMemorizingHelperToolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinesiologyMemorizingHelperToolApp.swift; sourceTree = "<group>"; };
-		4434E5002913424A00C8AFD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4434E5022913424C00C8AFD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4434E5042913424C00C8AFD0 /* KinesiologyMemorizingHelperTool.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KinesiologyMemorizingHelperTool.entitlements; sourceTree = "<group>"; };
 		4434E5062913424C00C8AFD0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4434E50E2914124A00C8AFD0 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
+		4434E5102914136B00C8AFD0 /* HistoryTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTabView.swift; sourceTree = "<group>"; };
+		4434E512291416C500C8AFD0 /* AllBonesAndMuscles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBonesAndMuscles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				4434E4FE2913424A00C8AFD0 /* KinesiologyMemorizingHelperToolApp.swift */,
-				4434E5002913424A00C8AFD0 /* ContentView.swift */,
+				4434E50D291411FE00C8AFD0 /* Views */,
 				4434E5022913424C00C8AFD0 /* Assets.xcassets */,
 				4434E5042913424C00C8AFD0 /* KinesiologyMemorizingHelperTool.entitlements */,
 				4434E5052913424C00C8AFD0 /* Preview Content */,
@@ -67,6 +71,16 @@
 				4434E5062913424C00C8AFD0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4434E50D291411FE00C8AFD0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4434E50E2914124A00C8AFD0 /* MainPageView.swift */,
+				4434E5102914136B00C8AFD0 /* HistoryTabView.swift */,
+				4434E512291416C500C8AFD0 /* AllBonesAndMuscles.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +153,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4434E5012913424A00C8AFD0 /* ContentView.swift in Sources */,
+				4434E5112914136B00C8AFD0 /* HistoryTabView.swift in Sources */,
+				4434E50F2914124A00C8AFD0 /* MainPageView.swift in Sources */,
+				4434E513291416C500C8AFD0 /* AllBonesAndMuscles.swift in Sources */,
 				4434E4FF2913424A00C8AFD0 /* KinesiologyMemorizingHelperToolApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
