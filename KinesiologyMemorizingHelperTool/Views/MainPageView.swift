@@ -13,6 +13,7 @@ struct MainPageView: View {
     var listOfPictures: [Bone] = [
         
         Bone(imageName: "Atlas")
+        
         ,
         
         Bone(imageName: "Axis")
@@ -20,6 +21,7 @@ struct MainPageView: View {
         ,
         
         Bone(imageName: "Calcaneus")
+        
         ,
         
         Bone(imageName: "Cervical Spine")
@@ -27,12 +29,15 @@ struct MainPageView: View {
         ,
         
         Bone(imageName: "Clavicle")
+        
         ,
         
         Bone(imageName: "Coccyx")
+        
         ,
         
         Bone(imageName: "Costal Cartilage")
+        
         ,
         
         Bone(imageName: "femur")
@@ -40,6 +45,7 @@ struct MainPageView: View {
         ,
         
         Bone(imageName: "Fibula")
+        
         ,
         
         Bone(imageName: "Frontal Bone")
@@ -50,47 +56,120 @@ struct MainPageView: View {
         
         ,
         
-        Bone(imageName: "")
+        Bone(imageName: "Hip Bone - Ilium, Pubis, Ischium")
         
         ,
         
-        Bone(imageName: "")
+        Bone(imageName: "Ilium")
         
         ,
         
-        Bone(imageName: "")
+        Bone(imageName: "Ischium")
         
         ,
         
-        Bone(imageName: "")
+        Bone(imageName: "LumbarSpine")
         
         ,
         
-        Bone(imageName: "")
+        Bone(imageName: "Mandible")
         
         ,
         
-        Bone(imageName: "")
+        Bone(imageName: "Maxilla")
         
         ,
         
-        Bone(imageName: "")
+        Bone(imageName: "Metacarpals")
         
         ,
         
-        Bone(imageName: "")
+        Bone(imageName: "Metatarsals")
         
         ,
         
-        Bone(imageName: "")
+        Bone(imageName: "Occipital Bone")
         
         ,
         
-        Bone(imageName: "")
+        Bone(imageName: "patella")
         
         ,
         
-        Bone(imageName: "")
+        Bone(imageName: "Phalanges")
+        
+        ,
+        
+        Bone(imageName: "Pubis")
+
+        ,
+        
+        Bone(imageName: "Radius")
+
+        ,
+        
+        Bone(imageName: "Manubrium")
+
+        ,
+        
+        Bone(imageName: "Sacrum")
+
+        ,
+        
+        Bone(imageName: "Carpals")
+
+        ,
+        
+        Bone(imageName: "Parietal Bone")
+
+        ,
+        
+        Bone(imageName: "Scapula")
+
+        ,
+        
+        Bone(imageName: "Sternum")
+
+        ,
+        
+        Bone(imageName: "Symphysis Pubis")
+
+        ,
+        
+        Bone(imageName: "Talus")
+
+        ,
+        
+        Bone(imageName: "Tarsals")
+
+        ,
+        
+        Bone(imageName: "Temporal Bone")
+        
+        ,
+        
+        Bone(imageName: "Thoracic Spine")
+        
+        ,
+        
+        Bone(imageName: "tibia")
+        
+        ,
+        
+        Bone(imageName: "Ulna")
+        
+        ,
+        
+        Bone(imageName: "Xiphoid Process")
+        
+        ,
+        
+        Bone(imageName: "Zygomatic Bone")
+        
+        ,
+        
+        Bone(imageName: "Ribs")
+        
     ]
     
     
