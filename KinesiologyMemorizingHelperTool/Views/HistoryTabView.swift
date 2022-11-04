@@ -15,22 +15,22 @@ struct HistoryTabView: View {
         }
     }
 }
-
-struct HistoryTabView_Previews: PreviewProvider {
-    static var previews: some View {
-        TabView {
-            HistoryTabView()
-                .tabItem {
-                    Label("History", systemImage: "list.dash")
-                }
-            AllBonesAndMuscles()
-                .tabItem {
-                    Label("All Bones And Muscles", systemImage: "books.vertical")
-                }
-            MainPageView()
-                .tabItem {
-                    Label("Questions", systemImage: "list.dash")
-                }
-        }
-    }
-}
+//
+//struct HistoryTabView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TabView {
+//            HistoryTabView()
+//                .tabItem {
+//                    Label("History", systemImage: "list.dash")
+//                }
+//            AllBonesAndMuscles()
+//                .tabItem {
+//                    Label("All Bones And Muscles", systemImage: "books.vertical")
+//                }
+//            MainPageView()
+//                .tabItem {
+//                    Label("Questions", systemImage: "list.dash")
+//                }
+//        }
+//    }
+//}
