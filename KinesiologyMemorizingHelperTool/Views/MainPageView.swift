@@ -18,6 +18,8 @@ struct MainPageView: View {
     
     @State var firstTimeTaskRun: Bool = false
     
+    @State var hasUserGuessed: Bool  = false
+    
     @State var randomImage1 = 0
     @State var randomImage2 = 1
     @State var randomImage3 = 2
@@ -44,23 +46,31 @@ struct MainPageView: View {
                         .resizable()
                         .scaledToFit()
                         .onTapGesture {
-                            if listOfPictures[randomImage1].imageName == correctAnswer {
-                                correctTextOpacity = true
-                            } else if listOfPictures[randomImage1].imageName != correctAnswer {
-                                wrongTextOpacity = true
+                            // checks whether the user has already guessed
+                            if hasUserGuessed == false {
+                                // if the image guessed is correct then notify the user that they have guessed corretly, otherwise tell them they got it wrong + flip hasUserGuessed to true
+                                if listOfPictures[randomImage1].imageName == correctAnswer {
+                                    correctTextOpacity = true
+                                    hasUserGuessed = true
+                                } else if listOfPictures[randomImage1].imageName != correctAnswer {
+                                    wrongTextOpacity = true
+                                    hasUserGuessed = true
+                                }
                             }
                         }
-                    // Image 2
-                    /// we need to put this under a button
-                    //                    randomImage2 = Int.random(in: 0..<listOfPictures.count)
+                    
                     Image(listOfPictures[randomImage2].imageName)
                         .resizable()
                         .scaledToFit()
                         .onTapGesture {
-                            if listOfPictures[randomImage2].imageName == correctAnswer {
-                                correctTextOpacity = true
-                            } else if listOfPictures[randomImage2].imageName != correctAnswer {
-                                wrongTextOpacity = true
+                            if hasUserGuessed == false {
+                                if listOfPictures[randomImage2].imageName == correctAnswer {
+                                    correctTextOpacity = true
+                                    hasUserGuessed = true
+                                } else if listOfPictures[randomImage2].imageName != correctAnswer {
+                                    wrongTextOpacity = true
+                                    hasUserGuessed = true
+                                }
                             }
                         }
                     // Image 3
@@ -69,10 +79,14 @@ struct MainPageView: View {
                         .resizable()
                         .scaledToFit()
                         .onTapGesture {
-                            if listOfPictures[randomImage3].imageName == correctAnswer {
-                                correctTextOpacity = true
-                            } else if listOfPictures[randomImage3].imageName != correctAnswer {
-                                wrongTextOpacity = true
+                            if hasUserGuessed == false {
+                                if listOfPictures[randomImage3].imageName == correctAnswer {
+                                    correctTextOpacity = true
+                                    hasUserGuessed = true
+                                } else if listOfPictures[randomImage3].imageName != correctAnswer {
+                                    wrongTextOpacity = true
+                                    hasUserGuessed = true
+                                }
                             }
                         }
                 }
@@ -93,6 +107,9 @@ struct MainPageView: View {
                         Button(action: {
                             // save the current question to history
                             boneToSavedList.append(BoneToSavedList(imageOne: listOfPictures[randomImage1].imageName, imageTwo: listOfPictures[randomImage2].imageName, imageThree: listOfPictures[randomImage3].imageName, whichAnswerIsCorrect: correctAnswer, isAnswerCorrect: correctTextOpacity))
+                            
+                            // rest hasUserGuessed
+                            hasUserGuessed = false
                             
                             // reset feedback message
                             wrongTextOpacity = false

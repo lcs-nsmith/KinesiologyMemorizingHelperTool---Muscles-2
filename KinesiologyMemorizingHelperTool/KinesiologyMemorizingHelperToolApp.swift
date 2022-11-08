@@ -69,7 +69,7 @@ struct KinesiologyMemorizingHelperToolApp: App {
         
         ,
         
-        Bone(imageName: "LumbarSpine")
+        Bone(imageName: "Lumbar Spine")
         
         ,
         
