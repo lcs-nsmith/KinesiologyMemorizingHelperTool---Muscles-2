@@ -105,37 +105,39 @@ struct MainPageView: View {
                             }
                     
                         Button(action: {
-                            // save the current question to history
-                            boneToSavedList.append(BoneToSavedList(imageOne: listOfPictures[randomImage1].imageName, imageTwo: listOfPictures[randomImage2].imageName, imageThree: listOfPictures[randomImage3].imageName, whichAnswerIsCorrect: correctAnswer, isAnswerCorrect: correctTextOpacity))
-                            
-                            // rest hasUserGuessed
-                            hasUserGuessed = false
-                            
-                            // reset feedback message
-                            wrongTextOpacity = false
-                            correctTextOpacity = false
-                        
-                            // generate new images
-                            randomImage1 = Int.random(in: 0..<listOfPictures.count)
-                            randomImage2 = Int.random(in: 0..<listOfPictures.count)
-                            while randomImage2 == randomImage1 {
+                            if hasUserGuessed == true {
+                                // save the current question to history
+                                boneToSavedList.append(BoneToSavedList(imageOne: listOfPictures[randomImage1].imageName, imageTwo: listOfPictures[randomImage2].imageName, imageThree: listOfPictures[randomImage3].imageName, whichAnswerIsCorrect: correctAnswer, isAnswerCorrect: correctTextOpacity))
+                                
+                                // reset hasUserGuessed
+                                hasUserGuessed = false
+                                
+                                // reset feedback message
+                                wrongTextOpacity = false
+                                correctTextOpacity = false
+                                
+                                // generate new images
+                                randomImage1 = Int.random(in: 0..<listOfPictures.count)
                                 randomImage2 = Int.random(in: 0..<listOfPictures.count)
-                            }
-                            randomImage3 = Int.random(in: 0..<listOfPictures.count)
-                            while randomImage3 == randomImage1 || randomImage3 == randomImage2 {
+                                while randomImage2 == randomImage1 {
+                                    randomImage2 = Int.random(in: 0..<listOfPictures.count)
+                                }
                                 randomImage3 = Int.random(in: 0..<listOfPictures.count)
-                            }
-                            randomNumberToSelectTheCorrectImage = Int.random(in: 1...3)
-                            
-                            // assign a new correct image
-                            if randomNumberToSelectTheCorrectImage == 1 {
-                                correctAnswer = listOfPictures[randomImage1].imageName
-                            } else if randomNumberToSelectTheCorrectImage == 2 {
-                                correctAnswer = listOfPictures[randomImage2].imageName
-                            } else if randomNumberToSelectTheCorrectImage == 3 {
-                                correctAnswer = listOfPictures[randomImage3].imageName
-                            } else {
-                                print("error - randomNumberToSelectTheCorrectImage is broken")
+                                while randomImage3 == randomImage1 || randomImage3 == randomImage2 {
+                                    randomImage3 = Int.random(in: 0..<listOfPictures.count)
+                                }
+                                randomNumberToSelectTheCorrectImage = Int.random(in: 1...3)
+                                
+                                // assign a new correct image
+                                if randomNumberToSelectTheCorrectImage == 1 {
+                                    correctAnswer = listOfPictures[randomImage1].imageName
+                                } else if randomNumberToSelectTheCorrectImage == 2 {
+                                    correctAnswer = listOfPictures[randomImage2].imageName
+                                } else if randomNumberToSelectTheCorrectImage == 3 {
+                                    correctAnswer = listOfPictures[randomImage3].imageName
+                                } else {
+                                    print("error - randomNumberToSelectTheCorrectImage is broken")
+                                }
                             }
                         }, label: {
                             Text("New Question")
