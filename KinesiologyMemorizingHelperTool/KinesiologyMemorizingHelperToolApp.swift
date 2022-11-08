@@ -173,16 +173,16 @@ struct KinesiologyMemorizingHelperToolApp: App {
         
     ]
     
-    
+    @State var boneToSavedList: [BoneToSavedList] = []
     
     var body: some Scene {
         WindowGroup {
             TabView {
-                MainPageView(listOfPictures: $listOfPictures)
+                MainPageView(listOfPictures: $listOfPictures, boneToSavedList: $boneToSavedList)
                     .tabItem {
                         Label("Questions", systemImage: "list.dash")
                     }
-                HistoryTabView()
+                HistoryTabView(boneToSavedList: $boneToSavedList)
                     .tabItem {
                         Label("History", systemImage: "list.dash")
                     }

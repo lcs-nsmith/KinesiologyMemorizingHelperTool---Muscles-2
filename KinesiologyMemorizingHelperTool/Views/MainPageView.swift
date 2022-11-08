@@ -12,7 +12,20 @@ struct MainPageView: View {
     
     @Binding var listOfPictures: [Bone]
     
+    @Binding var boneToSavedList: [BoneToSavedList]
+    
+    @State var correctAnswer: String = ""
+    
+    @State var randomImage1 = 0
+    @State var randomImage2 = 1
+    @State var randomImage3 = 2
+    
+    @State var correctTextOpacity = false
+    @State var wrongTextOpacity = false
+    
     // MARK: Computed Properties
+    @State var randomNumberToSelectTheCorrectImage = 2
+    
     var body: some View {
         ZStack {
             Color(.systemGray6)
@@ -22,47 +35,137 @@ struct MainPageView: View {
                 Text("Nathan's Kinesiology Memorizing Helper Tool")
                     .font(.system(size: 35, weight: .medium, design: .serif))
                 HStack {
-                    let randomImage1 = Int.random(in: 0..<listOfPictures.count)
+                    
+                    // Image 1
+                    //                    randomImage1 = Int.random(in: 0..<listOfPictures.count)
                     Image(listOfPictures[randomImage1].imageName)
                         .resizable()
                         .scaledToFit()
-                    let randomImage2 = Int.random(in: 0..<listOfPictures.count)
+                        .onTapGesture {
+                            if listOfPictures[randomImage1].imageName == correctAnswer {
+                                correctTextOpacity = true
+                            } else if listOfPictures[randomImage1].imageName != correctAnswer {
+                                wrongTextOpacity = true
+                            }
+                        }
+                    // Image 2
+                    /// we need to put this under a button
+                    //                    randomImage2 = Int.random(in: 0..<listOfPictures.count)
                     Image(listOfPictures[randomImage2].imageName)
                         .resizable()
                         .scaledToFit()
-                    let randomImage3 = Int.random(in: 0..<listOfPictures.count)
+                        .onTapGesture {
+                            if listOfPictures[randomImage2].imageName == correctAnswer {
+                                correctTextOpacity = true
+                            } else if listOfPictures[randomImage2].imageName != correctAnswer {
+                                wrongTextOpacity = true
+                            }
+                        }
+                    // Image 3
+                    //                    randomImage3 = Int.random(in: 0..<listOfPictures.count)
                     Image(listOfPictures[randomImage3].imageName)
                         .resizable()
                         .scaledToFit()
+                        .onTapGesture {
+                            if listOfPictures[randomImage3].imageName == correctAnswer {
+                                correctTextOpacity = true
+                            } else if listOfPictures[randomImage3].imageName != correctAnswer {
+                                wrongTextOpacity = true
+                            }
+                        }
                 }
-                ZStack {
-                    Text("Correct!")
-                        .font(.system(size: 35, weight: .medium, design: .serif))
-                        .foregroundColor(.green)
-                    Text("Wrong")
-                        .font(.system(size: 35, weight: .medium, design: .serif))
-                        .foregroundColor(.red)
+                HStack (spacing: 120){
+                            Text("Find The \(correctAnswer)")
+                            .font(.title)
+                            ZStack {
+                                Text("Correct!")
+                                    .font(.system(size: 35, weight: .medium, design: .serif))
+                                    .foregroundColor(.green)
+                                    .opacity(correctTextOpacity ? 1.0 : 0.0)
+                                Text("Wrong")
+                                    .font(.system(size: 35, weight: .medium, design: .serif))
+                                    .foregroundColor(.red)
+                                    .opacity(wrongTextOpacity ? 1.0 : 0.0)
+                            }
+                    
+                        Button(action: {
+                            // save the current question to history
+                            boneToSavedList.append(BoneToSavedList(imageOne: listOfPictures[randomImage1].imageName, imageTwo: listOfPictures[randomImage2].imageName, imageThree: listOfPictures[randomImage3].imageName, whichAnswerIsCorrect: correctAnswer, isAnswerCorrect: correctTextOpacity))
+                            
+                            // reset feedback message
+                            wrongTextOpacity = false
+                            correctTextOpacity = false
+                        
+                            // generate new images
+                            randomImage1 = Int.random(in: 0..<listOfPictures.count)
+                            randomImage2 = Int.random(in: 0..<listOfPictures.count)
+                            while randomImage2 == randomImage1 {
+                                randomImage2 = Int.random(in: 0..<listOfPictures.count)
+                            }
+                            randomImage3 = Int.random(in: 0..<listOfPictures.count)
+                            while randomImage3 == randomImage1 || randomImage3 == randomImage2 {
+                                randomImage3 = Int.random(in: 0..<listOfPictures.count)
+                            }
+                            randomNumberToSelectTheCorrectImage = Int.random(in: 1...3)
+                            
+                            // assign a new correct image
+                            if randomNumberToSelectTheCorrectImage == 1 {
+                                correctAnswer = listOfPictures[randomImage1].imageName
+                            } else if randomNumberToSelectTheCorrectImage == 2 {
+                                correctAnswer = listOfPictures[randomImage2].imageName
+                            } else if randomNumberToSelectTheCorrectImage == 3 {
+                                correctAnswer = listOfPictures[randomImage3].imageName
+                            } else {
+                                print("error - randomNumberToSelectTheCorrectImage is broken")
+                            }
+                        }, label: {
+                            Text("New Question")
+                        })
+                        .buttonStyle(.borderedProminent)
                 }
+            }
+        }
+        .task {
+            // generate images
+            randomImage1 = Int.random(in: 0..<listOfPictures.count)
+            randomImage2 = Int.random(in: 0..<listOfPictures.count)
+            while randomImage2 == randomImage1 {
+                randomImage2 = Int.random(in: 0..<listOfPictures.count)
+            }
+            randomImage3 = Int.random(in: 0..<listOfPictures.count)
+            while randomImage3 == randomImage1 || randomImage3 == randomImage2 {
+                randomImage3 = Int.random(in: 0..<listOfPictures.count)
+            }
+            randomNumberToSelectTheCorrectImage = Int.random(in: 1...3)
+            
+            // assign a correct image
+            if randomNumberToSelectTheCorrectImage == 1 {
+                correctAnswer = listOfPictures[randomImage1].imageName
+            } else if randomNumberToSelectTheCorrectImage == 2 {
+                correctAnswer = listOfPictures[randomImage2].imageName
+            } else if randomNumberToSelectTheCorrectImage == 3 {
+                correctAnswer = listOfPictures[randomImage3].imageName
+            } else {
+                print("error - randomNumberToSelectTheCorrectImage is broken")
             }
         }
     }
 }
-
-//struct MainPageView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TabView {
-//            MainPageView()
-//                .tabItem {
-//                    Label("Questions", systemImage: "list.dash")
-//                }
-//            HistoryTabView()
-//                .tabItem {
-//                    Label("History", systemImage: "list.dash")
-//                }
-//            AllBonesAndMuscles()
-//                .tabItem {
-//                    Label("All Bones And Muscles", systemImage: "books.vertical")
-//                }
-//        }
-//    }
-//}
+    //struct MainPageView_Previews: PreviewProvider {
+    //    static var previews: some View {
+    //        TabView {
+    //            MainPageView()
+    //                .tabItem {
+    //                    Label("Questions", systemImage: "list.dash")
+    //                }
+    //            HistoryTabView()
+    //                .tabItem {
+    //                    Label("History", systemImage: "list.dash")
+    //                }
+    //            AllBonesAndMuscles()
+    //                .tabItem {
+    //                    Label("All Bones And Muscles", systemImage: "books.vertical")
+    //                }
+    //        }
+    //    }
+    //}
