@@ -12,6 +12,9 @@ struct HistoryTabView: View {
     
     @Binding var boneToSavedList: [BoneToSavedList]
     
+    
+    @State var selectionTrue: Int = 0
+    
     // MARK: Computed Properties
     var body: some View {
         ZStack {
@@ -19,46 +22,95 @@ struct HistoryTabView: View {
                 .ignoresSafeArea()
             
             VStack {
-                List(boneToSavedList) { currentItem in
+                Picker(selection: $selectionTrue,
+                       label: Text("selectionTypePicker"),
+                       content: {
+                    Text("No Filter").tag(1)
+                    Text("Correct Answers").tag(2)
+                    Text("Wrong Answers").tag(3)
+                })
+                .pickerStyle(SegmentedPickerStyle())
+                
+                List(filtered(from: boneToSavedList, selectionTrue: selectionTrue)) { currentBone in
                     HStack {
-                        Image(currentItem.imageOne)
+                        Image(currentBone.imageOne)
                             .resizable()
                             .scaledToFit()
-                        Image(currentItem.imageTwo)
+                        Image(currentBone.imageTwo)
                             .resizable()
                             .scaledToFit()
-                        Image(currentItem.imageThree)
+                        Image(currentBone.imageThree)
                             .resizable()
                             .scaledToFit()
-                        Text("\(currentItem.whichAnswerIsCorrect) was the correct answer")
+                        Text("\(currentBone.whichAnswerIsCorrect) was the correct answer")
                             .font(.title)
                             .fontWeight(.medium)
                         
                         ZStack {
                             Text("You got it right!")
                                 .foregroundColor(.green)
-                                .opacity(currentItem.isAnswerCorrect ? 1.0 : 0.0)
+                                .opacity(currentBone.isAnswerCorrect ? 1.0 : 0.0)
                                 .font(.title)
                             
                             Text("You got it wrong :(")
                                 .foregroundColor(.red)
-                                .opacity(currentItem.isAnswerCorrect ? 0.0 : 1.0)
+                                .opacity(currentBone.isAnswerCorrect ? 0.0 : 1.0)
                                 .font(.title)
                         }
                         ZStack {
                             Image(systemName: "x.square")
                                 .foregroundColor(.red)
-                                .opacity(currentItem.isAnswerCorrect ? 0.0 : 1.0)
+                                .opacity(currentBone.isAnswerCorrect ? 0.0 : 1.0)
                                 .font(.system(size: 60))
-
+                            
                             Image(systemName: "checkmark.circle")
                                 .foregroundColor(.green)
-                                .opacity(currentItem.isAnswerCorrect ? 1.0 : 0.0)
+                                .opacity(currentBone.isAnswerCorrect ? 1.0 : 0.0)
                                 .font(.system(size: 60))
-                                
+                            
                         }
-        
                     }
+                    
+//                    List(boneToSavedList) { currentItem in
+//                        HStack {
+//                            Image(currentItem.imageOne)
+//                                .resizable()
+//                                .scaledToFit()
+//                            Image(currentItem.imageTwo)
+//                                .resizable()
+//                                .scaledToFit()
+//                            Image(currentItem.imageThree)
+//                                .resizable()
+//                                .scaledToFit()
+//                            Text("\(currentItem.whichAnswerIsCorrect) was the correct answer")
+//                                .font(.title)
+//                                .fontWeight(.medium)
+//
+//                            ZStack {
+//                                Text("You got it right!")
+//                                    .foregroundColor(.green)
+//                                    .opacity(currentItem.isAnswerCorrect ? 1.0 : 0.0)
+//                                    .font(.title)
+//
+//                                Text("You got it wrong :(")
+//                                    .foregroundColor(.red)
+//                                    .opacity(currentItem.isAnswerCorrect ? 0.0 : 1.0)
+//                                    .font(.title)
+//                            }
+//                            ZStack {
+//                                Image(systemName: "x.square")
+//                                    .foregroundColor(.red)
+//                                    .opacity(currentItem.isAnswerCorrect ? 0.0 : 1.0)
+//                                    .font(.system(size: 60))
+//
+//                                Image(systemName: "checkmark.circle")
+//                                    .foregroundColor(.green)
+//                                    .opacity(currentItem.isAnswerCorrect ? 1.0 : 0.0)
+//                                    .font(.system(size: 60))
+//
+//                            }
+//                        }
+//                    }
                 }
             }
         }
