@@ -16,6 +16,8 @@ struct MainPageView: View {
     
     @State var correctAnswer: String = ""
     
+    @State var firstTimeTaskRun: Bool = false
+    
     @State var randomImage1 = 0
     @State var randomImage2 = 1
     @State var randomImage3 = 2
@@ -126,27 +128,30 @@ struct MainPageView: View {
             }
         }
         .task {
-            // generate images
-            randomImage1 = Int.random(in: 0..<listOfPictures.count)
-            randomImage2 = Int.random(in: 0..<listOfPictures.count)
-            while randomImage2 == randomImage1 {
+            if firstTimeTaskRun == false {
+                // generate images
+                randomImage1 = Int.random(in: 0..<listOfPictures.count)
                 randomImage2 = Int.random(in: 0..<listOfPictures.count)
-            }
-            randomImage3 = Int.random(in: 0..<listOfPictures.count)
-            while randomImage3 == randomImage1 || randomImage3 == randomImage2 {
+                while randomImage2 == randomImage1 {
+                    randomImage2 = Int.random(in: 0..<listOfPictures.count)
+                }
                 randomImage3 = Int.random(in: 0..<listOfPictures.count)
-            }
-            randomNumberToSelectTheCorrectImage = Int.random(in: 1...3)
-            
-            // assign a correct image
-            if randomNumberToSelectTheCorrectImage == 1 {
-                correctAnswer = listOfPictures[randomImage1].imageName
-            } else if randomNumberToSelectTheCorrectImage == 2 {
-                correctAnswer = listOfPictures[randomImage2].imageName
-            } else if randomNumberToSelectTheCorrectImage == 3 {
-                correctAnswer = listOfPictures[randomImage3].imageName
-            } else {
-                print("error - randomNumberToSelectTheCorrectImage is broken")
+                while randomImage3 == randomImage1 || randomImage3 == randomImage2 {
+                    randomImage3 = Int.random(in: 0..<listOfPictures.count)
+                }
+                randomNumberToSelectTheCorrectImage = Int.random(in: 1...3)
+                
+                // assign a correct image
+                if randomNumberToSelectTheCorrectImage == 1 {
+                    correctAnswer = listOfPictures[randomImage1].imageName
+                } else if randomNumberToSelectTheCorrectImage == 2 {
+                    correctAnswer = listOfPictures[randomImage2].imageName
+                } else if randomNumberToSelectTheCorrectImage == 3 {
+                    correctAnswer = listOfPictures[randomImage3].imageName
+                } else {
+                    print("error - randomNumberToSelectTheCorrectImage is broken")
+                }
+                firstTimeTaskRun = true
             }
         }
     }
