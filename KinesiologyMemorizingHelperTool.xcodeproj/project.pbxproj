@@ -14,7 +14,6 @@
 		4434E5112914136B00C8AFD0 /* HistoryTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434E5102914136B00C8AFD0 /* HistoryTabView.swift */; };
 		4434E513291416C500C8AFD0 /* AllBonesAndMuscles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434E512291416C500C8AFD0 /* AllBonesAndMuscles.swift */; };
 		4434E516291422B600C8AFD0 /* Bone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434E515291422B600C8AFD0 /* Bone.swift */; };
-		4434E5192914238E00C8AFD0 /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434E5182914238E00C8AFD0 /* RemoteImageView.swift */; };
 		446C98522919DEC900E69B34 /* BoneToSavedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C98512919DEC900E69B34 /* BoneToSavedList.swift */; };
 		44ABB2162919F57A00D64358 /* FilterFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABB2152919F57A00D64358 /* FilterFunction.swift */; };
 /* End PBXBuildFile section */
@@ -29,7 +28,6 @@
 		4434E5102914136B00C8AFD0 /* HistoryTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTabView.swift; sourceTree = "<group>"; };
 		4434E512291416C500C8AFD0 /* AllBonesAndMuscles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBonesAndMuscles.swift; sourceTree = "<group>"; };
 		4434E515291422B600C8AFD0 /* Bone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bone.swift; sourceTree = "<group>"; };
-		4434E5182914238E00C8AFD0 /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
 		446C98512919DEC900E69B34 /* BoneToSavedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoneToSavedList.swift; sourceTree = "<group>"; };
 		44ABB2152919F57A00D64358 /* FilterFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,7 +87,6 @@
 				4434E50E2914124A00C8AFD0 /* MainPageView.swift */,
 				4434E5102914136B00C8AFD0 /* HistoryTabView.swift */,
 				4434E512291416C500C8AFD0 /* AllBonesAndMuscles.swift */,
-				4434E5172914237B00C8AFD0 /* Helpers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -101,14 +98,6 @@
 				446C98512919DEC900E69B34 /* BoneToSavedList.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		4434E5172914237B00C8AFD0 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				4434E5182914238E00C8AFD0 /* RemoteImageView.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		44ABB2142919F55B00D64358 /* Functions */ = {
@@ -195,7 +184,6 @@
 				44ABB2162919F57A00D64358 /* FilterFunction.swift in Sources */,
 				4434E50F2914124A00C8AFD0 /* MainPageView.swift in Sources */,
 				4434E513291416C500C8AFD0 /* AllBonesAndMuscles.swift in Sources */,
-				4434E5192914238E00C8AFD0 /* RemoteImageView.swift in Sources */,
 				4434E4FF2913424A00C8AFD0 /* KinesiologyMemorizingHelperToolApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
