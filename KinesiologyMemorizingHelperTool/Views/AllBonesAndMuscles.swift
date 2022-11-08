@@ -22,8 +22,8 @@ struct AllBonesAndMuscles: View {
     
     var body: some View {
         ZStack {
-            Color(.systemGray6)
-                .ignoresSafeArea()
+//            Color(.systemGray6)
+//                .ignoresSafeArea()
             
             List(listOfPictures) { currentItem in
                 LazyVGrid(columns: columns, spacing: 20) {

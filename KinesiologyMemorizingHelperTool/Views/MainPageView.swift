@@ -32,8 +32,8 @@ struct MainPageView: View {
     
     var body: some View {
         ZStack {
-            Color(.systemGray6)
-                .ignoresSafeArea()
+//            Color(.systemGray6)
+//                .ignoresSafeArea()
             
             VStack {
                 Text("Nathan's Kinesiology Memorizing Helper Tool")

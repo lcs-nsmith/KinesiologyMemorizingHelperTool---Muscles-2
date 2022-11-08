@@ -17,8 +17,8 @@ struct HistoryTabView: View {
     // MARK: Computed Properties
     var body: some View {
         ZStack {
-            Color(.systemGray6)
-                .ignoresSafeArea()
+//            Color(.systemGray6)
+//                .ignoresSafeArea()
             
             VStack {
                 Picker(selection: $selectionTrue,
