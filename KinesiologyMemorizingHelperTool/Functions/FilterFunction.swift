@@ -30,7 +30,6 @@ func filtered(from list: [BoneToSavedList], selectionTrue: Int) -> [BoneToSavedL
         }
         return filteredResultsFalse
     } else {
-        print("A CATASTROPHIC ERROR HAS ARISEN")
         return list
     }
 }
