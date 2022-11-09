@@ -36,7 +36,7 @@ struct MainPageView: View {
 //                .ignoresSafeArea()
             
             VStack {
-                Text("Nathan's Kinesiology Memorizing Helper Tool")
+                Text("Kinesiology Memorizing Helper Tool")
                     .font(.system(size: 35, weight: .medium, design: .serif))
                 HStack {
                     
