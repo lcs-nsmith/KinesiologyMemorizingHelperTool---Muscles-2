@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AllBonesAndMuscles: View {
     
-    @Binding var listOfPictures: [Bone]
+    @Binding var listOfPictures: [Muscle]
     
     
     let columns = [

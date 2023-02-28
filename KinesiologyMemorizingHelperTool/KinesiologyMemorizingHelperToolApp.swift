@@ -11,166 +11,97 @@ import SwiftUI
 struct KinesiologyMemorizingHelperToolApp: App {
     
     // MARK: Stored Properties
-   @State var listOfPictures: [Bone] = [
+   @State var listOfPictures: [Muscle] = [
         
-        Bone(imageName: "Atlas")
-        
-        ,
-        
-        Bone(imageName: "Axis")
+        Muscle(imageName: "Adductor Brevis")
         
         ,
         
-        Bone(imageName: "Calcaneus")
+        Muscle(imageName: "Adductor Longus")
         
         ,
         
-        Bone(imageName: "Cervical Spine")
+        Muscle(imageName: "Adductor Magnus")
         
         ,
         
-        Bone(imageName: "Clavicle")
+        Muscle(imageName: "Gastrocnemius")
         
         ,
         
-        Bone(imageName: "Coccyx")
+        Muscle(imageName: "Gluteus Maximus")
         
         ,
         
-        Bone(imageName: "Costal Cartilage")
+        Muscle(imageName: "Gluteus Medius")
         
         ,
         
-        Bone(imageName: "femur")
+        Muscle(imageName: "Gluteus Minimus")
         
         ,
         
-        Bone(imageName: "Fibula")
+        Muscle(imageName: "Gracilis")
         
         ,
         
-        Bone(imageName: "Frontal Bone")
+        Muscle(imageName: "Iliopsoas (Psoas Major & Iliacus)")
         
         ,
         
-        Bone(imageName: "Humerus")
+        Muscle(imageName: "Pectineus")
         
         ,
         
-        Bone(imageName: "Hip Bone - Ilium, Pubis, Ischium")
+        Muscle(imageName: "Psoas minor")
         
         ,
         
-        Bone(imageName: "Ilium")
+        Muscle(imageName: "Ririformis")
         
         ,
         
-        Bone(imageName: "Ischium")
+        Muscle(imageName: "Sartorius")
         
         ,
         
-        Bone(imageName: "Lumbar Spine")
+        Muscle(imageName: "Soleus")
         
         ,
         
-        Bone(imageName: "Mandible")
+        Muscle(imageName: "Tensor Fascia Latae")
         
         ,
         
-        Bone(imageName: "Maxilla")
+        Muscle(imageName: "Tibialis Anterior")
         
         ,
         
-        Bone(imageName: "Metacarpals")
+        Muscle(imageName: "Vastus Intermedius")
         
         ,
         
-        Bone(imageName: "Metatarsals")
+        Muscle(imageName: "Rectus Femoris")
         
         ,
         
-        Bone(imageName: "Occipital Bone")
+        Muscle(imageName: "Vastus Lateralis")
         
         ,
         
-        Bone(imageName: "patella")
+        Muscle(imageName: "Vastus Medialis")
         
         ,
         
-        Bone(imageName: "Phalanges")
+        Muscle(imageName: "Semimembranosus")
         
         ,
         
-        Bone(imageName: "Pubis")
-
-        ,
-        
-        Bone(imageName: "Radius")
-
-        ,
-        
-        Bone(imageName: "Manubrium")
-
-        ,
-        
-        Bone(imageName: "Sacrum")
-
-        ,
-        
-        Bone(imageName: "Carpals")
-
-        ,
-        
-        Bone(imageName: "Parietal Bone")
-
-        ,
-        
-        Bone(imageName: "Scapula")
-
-        ,
-        
-        Bone(imageName: "Sternum")
-
-        ,
-        
-        Bone(imageName: "Symphysis Pubis")
-
-        ,
-        
-        Bone(imageName: "Talus")
-
-        ,
-        
-        Bone(imageName: "Tarsals")
-
-        ,
-        
-        Bone(imageName: "Temporal Bone")
+        Muscle(imageName: "Semitendinosus")
         
         ,
         
-        Bone(imageName: "Thoracic Spine")
-        
-        ,
-        
-        Bone(imageName: "tibia")
-        
-        ,
-        
-        Bone(imageName: "Ulna")
-        
-        ,
-        
-        Bone(imageName: "Xiphoid Process")
-        
-        ,
-        
-        Bone(imageName: "Zygomatic Bone")
-        
-        ,
-        
-        Bone(imageName: "Ribs")
-        
+        Muscle(imageName: "Biceps Femoris")
     ]
     
     @State var boneToSavedList: [BoneToSavedList] = []
@@ -178,11 +109,11 @@ struct KinesiologyMemorizingHelperToolApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                MainPageView(listOfPictures: $listOfPictures, boneToSavedList: $boneToSavedList)
+                MainPageView(listOfPictures: $listOfPictures, muscleToSavedList: $boneToSavedList)
                     .tabItem {
                         Label("Questions", systemImage: "list.dash")
                     }
-                HistoryTabView(boneToSavedList: $boneToSavedList)
+                HistoryTabView(muscleToSavedList: $boneToSavedList)
                     .tabItem {
                         Label("History", systemImage: "list.dash")
                     }

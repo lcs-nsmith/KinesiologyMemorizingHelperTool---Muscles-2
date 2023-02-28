@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Bone: Identifiable {
+struct Muscle: Identifiable {
     let id = UUID()
     let imageName: String
 }

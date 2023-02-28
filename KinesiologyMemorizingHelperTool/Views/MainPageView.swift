@@ -10,9 +10,9 @@ import SwiftUI
 struct MainPageView: View {
     // MARK: Stored Properties
     
-    @Binding var listOfPictures: [Bone]
+    @Binding var listOfPictures: [Muscle]
     
-    @Binding var boneToSavedList: [BoneToSavedList]
+    @Binding var muscleToSavedList: [BoneToSavedList]
     
     @State var correctAnswer: String = ""
     
@@ -107,7 +107,7 @@ struct MainPageView: View {
                         Button(action: {
                             if hasUserGuessed == true {
                                 // save the current question to history
-                                boneToSavedList.append(BoneToSavedList(imageOne: listOfPictures[randomImage1].imageName, imageTwo: listOfPictures[randomImage2].imageName, imageThree: listOfPictures[randomImage3].imageName, whichAnswerIsCorrect: correctAnswer, isAnswerCorrect: correctTextOpacity))
+                                muscleToSavedList.append(BoneToSavedList(imageOne: listOfPictures[randomImage1].imageName, imageTwo: listOfPictures[randomImage2].imageName, imageThree: listOfPictures[randomImage3].imageName, whichAnswerIsCorrect: correctAnswer, isAnswerCorrect: correctTextOpacity))
                                 
                                 // reset hasUserGuessed
                                 hasUserGuessed = false
