@@ -13,7 +13,7 @@
 		4434E50F2914124A00C8AFD0 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434E50E2914124A00C8AFD0 /* MainPageView.swift */; };
 		4434E5112914136B00C8AFD0 /* HistoryTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434E5102914136B00C8AFD0 /* HistoryTabView.swift */; };
 		4434E513291416C500C8AFD0 /* AllBonesAndMuscles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434E512291416C500C8AFD0 /* AllBonesAndMuscles.swift */; };
-		4434E516291422B600C8AFD0 /* Muscle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434E515291422B600C8AFD0 /* Muscle.swift */; };
+		4434E516291422B600C8AFD0 /* BoneOrMuscle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434E515291422B600C8AFD0 /* BoneOrMuscle.swift */; };
 		446C98522919DEC900E69B34 /* BoneToSavedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C98512919DEC900E69B34 /* BoneToSavedList.swift */; };
 		44ABB2162919F57A00D64358 /* FilterFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ABB2152919F57A00D64358 /* FilterFunction.swift */; };
 /* End PBXBuildFile section */
@@ -27,7 +27,7 @@
 		4434E50E2914124A00C8AFD0 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 		4434E5102914136B00C8AFD0 /* HistoryTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTabView.swift; sourceTree = "<group>"; };
 		4434E512291416C500C8AFD0 /* AllBonesAndMuscles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBonesAndMuscles.swift; sourceTree = "<group>"; };
-		4434E515291422B600C8AFD0 /* Muscle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muscle.swift; sourceTree = "<group>"; };
+		4434E515291422B600C8AFD0 /* BoneOrMuscle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoneOrMuscle.swift; sourceTree = "<group>"; };
 		446C98512919DEC900E69B34 /* BoneToSavedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoneToSavedList.swift; sourceTree = "<group>"; };
 		44ABB2152919F57A00D64358 /* FilterFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,7 +94,7 @@
 		4434E514291422A700C8AFD0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4434E515291422B600C8AFD0 /* Muscle.swift */,
+				4434E515291422B600C8AFD0 /* BoneOrMuscle.swift */,
 				446C98512919DEC900E69B34 /* BoneToSavedList.swift */,
 			);
 			path = Model;
@@ -178,7 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4434E516291422B600C8AFD0 /* Muscle.swift in Sources */,
+				4434E516291422B600C8AFD0 /* BoneOrMuscle.swift in Sources */,
 				4434E5112914136B00C8AFD0 /* HistoryTabView.swift in Sources */,
 				446C98522919DEC900E69B34 /* BoneToSavedList.swift in Sources */,
 				44ABB2162919F57A00D64358 /* FilterFunction.swift in Sources */,

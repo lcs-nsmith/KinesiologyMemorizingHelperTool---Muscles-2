@@ -11,97 +11,258 @@ import SwiftUI
 struct KinesiologyMemorizingHelperToolApp: App {
     
     // MARK: Stored Properties
-   @State var listOfPictures: [Muscle] = [
+   @State var listOfPictures: [BoneOrMuscle] = [
         
-        Muscle(imageName: "Adductor Brevis")
-        
-        ,
-        
-        Muscle(imageName: "Adductor Longus")
+        BoneOrMuscle(imageName: "Adductor Brevis")
         
         ,
         
-        Muscle(imageName: "Adductor Magnus")
+        BoneOrMuscle(imageName: "Adductor Longus")
         
         ,
         
-        Muscle(imageName: "Gastrocnemius")
+        BoneOrMuscle(imageName: "Adductor Magnus")
         
         ,
         
-        Muscle(imageName: "Gluteus Maximus")
+        BoneOrMuscle(imageName: "Gastrocnemius")
         
         ,
         
-        Muscle(imageName: "Gluteus Medius")
+        BoneOrMuscle(imageName: "Gluteus Maximus")
         
         ,
         
-        Muscle(imageName: "Gluteus Minimus")
+        BoneOrMuscle(imageName: "Gluteus Medius")
         
         ,
         
-        Muscle(imageName: "Gracilis")
+        BoneOrMuscle(imageName: "Gluteus Minimus")
         
         ,
         
-        Muscle(imageName: "Iliopsoas (Psoas Major & Iliacus)")
+        BoneOrMuscle(imageName: "Gracilis")
         
         ,
         
-        Muscle(imageName: "Pectineus")
+        BoneOrMuscle(imageName: "Iliopsoas (Psoas Major & Iliacus)")
         
         ,
         
-        Muscle(imageName: "Psoas minor")
+        BoneOrMuscle(imageName: "Pectineus")
         
         ,
         
-        Muscle(imageName: "Ririformis")
+        BoneOrMuscle(imageName: "Psoas minor")
         
         ,
         
-        Muscle(imageName: "Sartorius")
+        BoneOrMuscle(imageName: "Ririformis")
         
         ,
         
-        Muscle(imageName: "Soleus")
+        BoneOrMuscle(imageName: "Sartorius")
         
         ,
         
-        Muscle(imageName: "Tensor Fascia Latae")
+        BoneOrMuscle(imageName: "Soleus")
         
         ,
         
-        Muscle(imageName: "Tibialis Anterior")
+        BoneOrMuscle(imageName: "Tensor Fascia Latae")
         
         ,
         
-        Muscle(imageName: "Vastus Intermedius")
+        BoneOrMuscle(imageName: "Tibialis Anterior")
         
         ,
         
-        Muscle(imageName: "Rectus Femoris")
+        BoneOrMuscle(imageName: "Vastus Intermedius")
         
         ,
         
-        Muscle(imageName: "Vastus Lateralis")
+        BoneOrMuscle(imageName: "Rectus Femoris")
         
         ,
         
-        Muscle(imageName: "Vastus Medialis")
+        BoneOrMuscle(imageName: "Vastus Lateralis")
         
         ,
         
-        Muscle(imageName: "Semimembranosus")
+        BoneOrMuscle(imageName: "Vastus Medialis")
         
         ,
         
-        Muscle(imageName: "Semitendinosus")
+        BoneOrMuscle(imageName: "Semimembranosus")
         
         ,
         
-        Muscle(imageName: "Biceps Femoris")
+        BoneOrMuscle(imageName: "Semitendinosus")
+        
+        ,
+        
+        BoneOrMuscle(imageName: "Biceps Femoris")
+        
+        ,
+             
+        BoneOrMuscle(imageName: "Atlas")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Axis")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Calcaneus")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Cervical Spine")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Clavicle")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Coccyx")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Costal Cartilage")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "femur")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Fibula")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Frontal Bone")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Humerus")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Hip Bone - Ilium, Pubis, Ischium")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Ilium")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Ischium")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Lumbar Spine")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Mandible")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Maxilla")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Metacarpals")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Metatarsals")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Occipital Bone")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "patella")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Phalanges")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Pubis")
+
+             ,
+             
+        BoneOrMuscle(imageName: "Radius")
+
+             ,
+             
+        BoneOrMuscle(imageName: "Manubrium")
+
+             ,
+             
+        BoneOrMuscle(imageName: "Sacrum")
+
+             ,
+             
+        BoneOrMuscle(imageName: "Carpals")
+
+             ,
+             
+        BoneOrMuscle(imageName: "Parietal Bone")
+
+             ,
+             
+        BoneOrMuscle(imageName: "Scapula")
+
+             ,
+             
+        BoneOrMuscle(imageName: "Sternum")
+
+             ,
+             
+        BoneOrMuscle(imageName: "Symphysis Pubis")
+
+             ,
+             
+        BoneOrMuscle(imageName: "Talus")
+
+             ,
+             
+        BoneOrMuscle(imageName: "Tarsals")
+
+             ,
+             
+        BoneOrMuscle(imageName: "Temporal Bone")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Thoracic Spine")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "tibia")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Ulna")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Xiphoid Process")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Zygomatic Bone")
+             
+             ,
+             
+        BoneOrMuscle(imageName: "Ribs")
+             
     ]
     
     @State var boneToSavedList: [BoneToSavedList] = []

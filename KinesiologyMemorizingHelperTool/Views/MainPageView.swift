@@ -10,7 +10,7 @@ import SwiftUI
 struct MainPageView: View {
     // MARK: Stored Properties
     
-    @Binding var listOfPictures: [Muscle]
+    @Binding var listOfPictures: [BoneOrMuscle]
     
     @Binding var muscleToSavedList: [BoneToSavedList]
     
