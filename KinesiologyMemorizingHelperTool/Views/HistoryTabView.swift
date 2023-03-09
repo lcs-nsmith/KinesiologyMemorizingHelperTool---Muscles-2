@@ -10,7 +10,7 @@ import SwiftUI
 struct HistoryTabView: View {
     // MARK: Stored Properties
     
-    @Binding var muscleToSavedList: [BoneToSavedList]
+    @Binding var muscleToSavedList: [BoneOrMuscleToSavedList]
     
     @State var selectionTrue: Int = 0
     

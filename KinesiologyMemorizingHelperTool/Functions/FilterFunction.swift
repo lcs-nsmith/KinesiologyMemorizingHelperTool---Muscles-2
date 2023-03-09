@@ -7,12 +7,12 @@
 
 import Foundation
 
-func filtered(from list: [BoneToSavedList], selectionTrue: Int) -> [BoneToSavedList] {
+func filtered(from list: [BoneOrMuscleToSavedList], selectionTrue: Int) -> [BoneOrMuscleToSavedList] {
     if selectionTrue == 1 {
         return list
     } else if selectionTrue == 2 {
         
-        var filteredResultsTrue: [BoneToSavedList] = []
+        var filteredResultsTrue: [BoneOrMuscleToSavedList] = []
         
         for bone in list {
             if bone.isAnswerCorrect == true {
@@ -21,7 +21,7 @@ func filtered(from list: [BoneToSavedList], selectionTrue: Int) -> [BoneToSavedL
         }
         return filteredResultsTrue
     } else if selectionTrue == 3 {
-        var filteredResultsFalse: [BoneToSavedList] = []
+        var filteredResultsFalse: [BoneOrMuscleToSavedList] = []
         
         for bone in list {
             if bone.isAnswerCorrect == false {

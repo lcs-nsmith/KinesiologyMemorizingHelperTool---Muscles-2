@@ -265,7 +265,7 @@ struct KinesiologyMemorizingHelperToolApp: App {
              
     ]
     
-    @State var boneToSavedList: [BoneToSavedList] = []
+    @State var boneToSavedList: [BoneOrMuscleToSavedList] = []
     
     var body: some Scene {
         WindowGroup {

@@ -12,7 +12,7 @@ struct MainPageView: View {
     
     @Binding var listOfPictures: [BoneOrMuscle]
     
-    @Binding var muscleToSavedList: [BoneToSavedList]
+    @Binding var muscleToSavedList: [BoneOrMuscleToSavedList]
     
     @State var correctAnswer: String = ""
     
@@ -107,7 +107,7 @@ struct MainPageView: View {
                         Button(action: {
                             if hasUserGuessed == true {
                                 // save the current question to history
-                                muscleToSavedList.append(BoneToSavedList(imageOne: listOfPictures[randomImage1].imageName, imageTwo: listOfPictures[randomImage2].imageName, imageThree: listOfPictures[randomImage3].imageName, whichAnswerIsCorrect: correctAnswer, isAnswerCorrect: correctTextOpacity))
+                                muscleToSavedList.append(BoneOrMuscleToSavedList(imageOne: listOfPictures[randomImage1].imageName, imageTwo: listOfPictures[randomImage2].imageName, imageThree: listOfPictures[randomImage3].imageName, whichAnswerIsCorrect: correctAnswer, isAnswerCorrect: correctTextOpacity))
                                 
                                 // reset hasUserGuessed
                                 hasUserGuessed = false

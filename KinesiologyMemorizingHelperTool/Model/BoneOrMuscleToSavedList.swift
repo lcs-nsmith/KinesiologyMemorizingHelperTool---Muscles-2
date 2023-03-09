@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BoneToSavedList: Identifiable {
+struct BoneOrMuscleToSavedList: Identifiable {
     let id = UUID()
     let imageOne: String
     let imageTwo: String
