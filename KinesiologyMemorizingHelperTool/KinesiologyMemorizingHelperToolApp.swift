@@ -270,7 +270,7 @@ struct KinesiologyMemorizingHelperToolApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                MainPageView(listOfPictures: $listOfPictures, muscleToSavedList: $boneOrMuscleToSavedList)
+                MainPageView(listOfPictures: $listOfPictures, muscleOrBoneToSavedList: $boneOrMuscleToSavedList)
                     .tabItem {
                         Label("Questions", systemImage: "list.dash")
                     }
