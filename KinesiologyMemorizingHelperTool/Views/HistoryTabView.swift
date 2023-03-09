@@ -10,7 +10,7 @@ import SwiftUI
 struct HistoryTabView: View {
     // MARK: Stored Properties
     
-    @Binding var muscleToSavedList: [BoneOrMuscleToSavedList]
+    @Binding var muscleOrBoneToSavedList: [BoneOrMuscleToSavedList]
     
     @State var selectionTrue: Int = 0
     
@@ -30,41 +30,41 @@ struct HistoryTabView: View {
                 })
                 .pickerStyle(SegmentedPickerStyle())
                 
-                List(filtered(from: muscleToSavedList, selectionTrue: selectionTrue)) { currentMuscle in
+                List(filtered(from: muscleOrBoneToSavedList, selectionTrue: selectionTrue)) { currentMuscleOrBone in
                     HStack {
-                        Image(currentMuscle.imageOne)
+                        Image(currentMuscleOrBone.imageOne)
                             .resizable()
                             .scaledToFit()
-                        Image(currentMuscle.imageTwo)
+                        Image(currentMuscleOrBone.imageTwo)
                             .resizable()
                             .scaledToFit()
-                        Image(currentMuscle.imageThree)
+                        Image(currentMuscleOrBone.imageThree)
                             .resizable()
                             .scaledToFit()
-                        Text("\(currentMuscle.whichAnswerIsCorrect) was the correct answer")
+                        Text("\(currentMuscleOrBone.whichAnswerIsCorrect) was the correct answer")
                             .font(.title)
                             .fontWeight(.medium)
                         
                         ZStack {
                             Text("You got it right!")
                                 .foregroundColor(.green)
-                                .opacity(currentMuscle.isAnswerCorrect ? 1.0 : 0.0)
+                                .opacity(currentMuscleOrBone.isAnswerCorrect ? 1.0 : 0.0)
                                 .font(.title)
                             
                             Text("You got it wrong :(")
                                 .foregroundColor(.red)
-                                .opacity(currentMuscle.isAnswerCorrect ? 0.0 : 1.0)
+                                .opacity(currentMuscleOrBone.isAnswerCorrect ? 0.0 : 1.0)
                                 .font(.title)
                         }
                         ZStack {
                             Image(systemName: "x.square")
                                 .foregroundColor(.red)
-                                .opacity(currentMuscle.isAnswerCorrect ? 0.0 : 1.0)
+                                .opacity(currentMuscleOrBone.isAnswerCorrect ? 0.0 : 1.0)
                                 .font(.system(size: 60))
                             
                             Image(systemName: "checkmark.circle")
                                 .foregroundColor(.green)
-                                .opacity(currentMuscle.isAnswerCorrect ? 1.0 : 0.0)
+                                .opacity(currentMuscleOrBone.isAnswerCorrect ? 1.0 : 0.0)
                                 .font(.system(size: 60))
                             
                         }

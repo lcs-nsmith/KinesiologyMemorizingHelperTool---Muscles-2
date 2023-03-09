@@ -274,7 +274,7 @@ struct KinesiologyMemorizingHelperToolApp: App {
                     .tabItem {
                         Label("Questions", systemImage: "list.dash")
                     }
-                HistoryTabView(muscleToSavedList: $boneOrMuscleToSavedList)
+                HistoryTabView(muscleOrBoneToSavedList: $boneOrMuscleToSavedList)
                     .tabItem {
                         Label("History", systemImage: "list.dash")
                     }
