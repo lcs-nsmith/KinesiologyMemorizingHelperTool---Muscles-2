@@ -99,9 +99,9 @@ struct KinesiologyMemorizingHelperToolApp: App {
         
         Muscle(imageName: "Semitendinosus")
         
-        ,
+        ,   
         
-        Muscle(imageName: "Biceps Femoris")
+        Muscle(imageName: "Biceps Femoris") 
     ]
     
     @State var boneToSavedList: [BoneToSavedList] = []
