@@ -11,98 +11,98 @@ import SwiftUI
 struct KinesiologyMemorizingHelperToolApp: App {
     
     // MARK: Stored Properties
-   @State var listOfPictures: [Muscle] = [
-        
-        Muscle(imageName: "Adductor Brevis")
-        
-        ,
-        
-        Muscle(imageName: "Adductor Longus")
-        
-        ,
-        
-        Muscle(imageName: "Adductor Magnus")
-        
-        ,
-        
-        Muscle(imageName: "Gastrocnemius")
-        
-        ,
-        
-        Muscle(imageName: "Gluteus Maximus")
-        
-        ,
-        
-        Muscle(imageName: "Gluteus Medius")
-        
-        ,
-        
-        Muscle(imageName: "Gluteus Minimus")
-        
-        ,
-        
-        Muscle(imageName: "Gracilis")
-        
-        ,
-        
-        Muscle(imageName: "Iliopsoas (Psoas Major & Iliacus)")
-        
-        ,
-        
-        Muscle(imageName: "Pectineus")
-        
-        ,
-        
-        Muscle(imageName: "Psoas minor")
-        
-        ,
-        
-        Muscle(imageName: "Ririformis")
-        
-        ,
-        
-        Muscle(imageName: "Sartorius")
-        
-        ,
-        
-        Muscle(imageName: "Soleus")
-        
-        ,
-        
-        Muscle(imageName: "Tensor Fascia Latae")
-        
-        ,
-        
-        Muscle(imageName: "Tibialis Anterior")
-        
-        ,
-        
-        Muscle(imageName: "Vastus Intermedius")
-        
-        ,
-        
-        Muscle(imageName: "Rectus Femoris")
-        
-        ,
-        
-        Muscle(imageName: "Vastus Lateralis")
-        
-        ,
-        
-        Muscle(imageName: "Vastus Medialis")
-        
-        ,
-        
-        Muscle(imageName: "Semimembranosus")
-        
-        ,
-        
-        Muscle(imageName: "Semitendinosus")
-        
-        ,   
-        
-        Muscle(imageName: "Biceps Femoris") 
-    ]
+    @State var listOfPictures: [Muscle] = [
+         
+         Muscle(imageName: "Brachialis")
+         
+         ,
+         
+         Muscle(imageName: "Brachioradialis")
+         
+         ,
+         
+         Muscle(imageName: "Coracobrachialis")
+         
+         ,
+         
+         Muscle(imageName: "Erector Spinae Group (Spinalis, Longissimus, Iliocostalis)")
+         
+         ,
+         
+         Muscle(imageName: "External Oblique")
+         
+         ,
+         
+         Muscle(imageName: "Iliocostalis")
+         
+         ,
+         
+         Muscle(imageName: "Infraspinatus")
+         
+         ,
+         
+         Muscle(imageName: "Intercostal Muscles")
+         
+         ,
+         
+         Muscle(imageName: "Latissimus Dorsi")
+         
+         ,
+         
+         Muscle(imageName: "Longissimus")
+         
+         ,
+         
+         Muscle(imageName: "Pectoralis Minor")
+         
+         ,
+         
+         Muscle(imageName: "Rectus Abdominis")
+         
+         ,
+         
+         Muscle(imageName: "Rhomboid Major and Minor")
+         
+         ,
+         
+         Muscle(imageName: "Serratus Anterior")
+         
+         ,
+         
+         Muscle(imageName: "Spinalis")
+         
+         ,
+         
+         Muscle(imageName: "Sternocleidomastoid")
+         
+         ,
+         
+         Muscle(imageName: "Subscapularis")
+         
+         ,
+         
+         Muscle(imageName: "Supraspinatus")
+         
+         ,
+         
+         Muscle(imageName: "Teres Major")
+         
+         ,
+         
+         Muscle(imageName: "Teres Minor")
+         
+         ,
+         
+         Muscle(imageName: "Transverse Abdominis")
+         
+         ,
+         
+         Muscle(imageName: "Trapezius")
+         
+         ,
+         
+         Muscle(imageName: "Wrist and Finger Flexors")
+     ]
     
     @State var boneToSavedList: [BoneToSavedList] = []
     
