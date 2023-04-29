@@ -109,18 +109,6 @@ struct KinesiologyMemorizingHelperToolApp: App {
 
    ,
 
-    BoneOrMuscle(imageName: "Vastus Medialis")
-
-   ,
-
-    BoneOrMuscle(imageName: "Semimembranosus")
-
-   ,
-
-    BoneOrMuscle(imageName: "Semitendinosus")
-
-   ,
-
     BoneOrMuscle(imageName: "Biceps Femoris")
 
     ,
@@ -158,10 +146,6 @@ struct KinesiologyMemorizingHelperToolApp: App {
     ,
 
     BoneOrMuscle(imageName: "Vastus Intermedius")
-
-    ,
-
-    BoneOrMuscle(imageName: "Rectus Femoris")
 
     ,
 
@@ -209,23 +193,7 @@ struct KinesiologyMemorizingHelperToolApp: App {
 
     ,
 
-    BoneOrMuscle(imageName: "Rectus Femoris")
-
-    ,
-
     BoneOrMuscle(imageName: "Vastus Lateralis")
-
-    ,
-
-    BoneOrMuscle(imageName: "Vastus Medialis")
-
-    ,
-
-    BoneOrMuscle(imageName: "Semimembranosus")
-
-    ,
-
-    BoneOrMuscle(imageName: "Semitendinosus")
 
     ,
 
